@@ -281,7 +281,11 @@ Protokolle der wöchentlichen Meetings jeden Dienstag.
 ### 16.2 Aktuelle Meetings 27.01.26
 [Meetingprotokolle werden hier dokumentiert - Carla]
 
-[Meetingprotokolle werden hier dokumentiert - Alpcan]
+**Alpcan - Testnotiz 20.01.2026:**
+- Dies ist ein Test für die GitHub Integration
+- Repository-Synchronisation erfolgreich getestet
+- Git Pull/Push Workflow funktioniert
+
 ---
 
 ## 17. Changelog
