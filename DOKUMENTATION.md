@@ -279,8 +279,9 @@ Logs befinden sich in: `logs/app.log`
 Protokolle der wöchentlichen Meetings jeden Dienstag.
 
 ### 16.2 Aktuelle Meetings 27.01.26
-[Meetingprotokolle werden hier dokumentiert]
+[Meetingprotokolle werden hier dokumentiert - Carla]
 
+[Meetingprotokolle werden hier dokumentiert - Alpcan]
 ---
 
 ## 17. Changelog
