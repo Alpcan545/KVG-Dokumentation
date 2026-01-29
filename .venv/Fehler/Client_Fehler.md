@@ -1,6 +1,6 @@
 # Client Fehler - Oxando XPC
 
-## SQLite Error 5: "database is locked" - 28.01.2026
+## 1. SQLite Error 5: "database is locked" - 28.01.2026
 
 ### Symptome
 - Fehlermeldung: **SQLite Error 5: 'database is locked'**
@@ -41,6 +41,8 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 - `OxandoXPC.Applications.Services.SyncProcessService`
 - `LoginPageModel.FinishLoginProcess`
 
+### Screenshot
+
 ### Status
 - **Offen**
 - Weitere Analyse erforderlich
@@ -54,7 +56,7 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 
 ---
 
-## Erweiterte Suche funktioniert nicht - iOS - 29.01.2026
+## 2. Erweiterte Suche funktioniert nicht - iOS - 29.01.2026
 
 ### Symptome
 - **Erweiterte Suche** funktioniert nicht im iOS-Gerät
@@ -65,20 +67,39 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 - **Datum**: 29.01.2026
 - **Plattform**: iOS (Mobile)
 - **Version**: Maui 1.0.14454.1 / iOS 1.0.78
+- **Szenario**: VTS (getestet im VTS-Szenario)
+
+### Schritte zum Reproduzieren
+1. Home Page öffnen
+2. Auf **"AUFTRAG"** klicken
+3. In die **Auftrags-Liste** navigieren
+4. Oben auf das **Lupe-Symbol** (Suche) klicken
+5. Auf **"Erweiterte Suche"** klicken
+6. **Button reagiert nicht** - Erweiterte Suche öffnet sich nicht
+
+### Fehlerbeschreibung
+- Der Button für "Erweiterte Suche" ist **nicht funktional**
+- Es gibt **keine Fehlermeldung**, der Button antwortet einfach nicht auf Klicks
+- Die erweiterte Suche kann daher nicht verwendet werden
+- **Funktioniert weder vertikal noch horizontal ** - Problem tritt in beiden Orientierungen auf
+
+### Screenshot
+![alt text](Screenshots/iOSerweiterteSuche_Fehler.jpg)
 
 ### Status
-- **Offen**
-- Weitere Informationen erforderlich
+- **✅ Erledigt**
+- Problem wurde nach Customizing-Verteilung behoben
+- Erweiterte Suche funktioniert wieder korrekt
 
 ### Nächste Schritte
-- Reproduzierbare Schritte ermitteln
-- Prüfen ob Problem auch in Android auftritt
-- Logs vom iOS-Gerät sammeln
-- Überprüfen der Suche-Implementierung in XAML/Code-Behind (iOS-spezifisch)
+- ~~Reproduzierbare Schritte ermitteln~~
+- ~~Logs vom iOS-Gerät sammeln~~
+- ~~Überprüfen der Suche-Implementierung in XAML/Code-Behind (iOS-spezifisch)~~
+- Problem gelöst durch Customizing-Verteilung
 
 ---
 
-## List Navigation funktioniert nicht wie im Customizing - 29.01.2026
+## ==3. List Navigation funktioniert nicht wie im Customizing - 29.01.2026==
 
 ### Symptome
 - **List Navigation** funktioniert nicht mehr gemäß Customizing-Einstellungen
@@ -97,6 +118,9 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 - **Version**: Maui 1.0.14454.1 / iOS 1.0.78
 - **Betroffener Bereich**: List Navigation Logik
 
+### Screenshot
+![alt text](Screenshots/SQLLiteError5.png)
+
 ### Status
 - **Offen**
 - Bug in der aktuellen Version
@@ -110,7 +134,7 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 
 ---
 
-## Übersetzungsfehler in Checkliste - VTR - 29.01.2026
+## 4. Übersetzungsfehler in Checkliste - VTR - 29.01.2026
 
 ### Symptome
 - **Übersetzungsfehler** in der Prüfer-Auswahl
@@ -128,6 +152,9 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 2. Checkliste aufrufen
 3. Prüfmerkmal schließen
 4. Dialog "Auswahl Prüfer" erscheint mit englischem Titel
+
+### Screenshot
+![alt text](Screenshots/Checkliste_AssignReviewer.png)
 
 ### Status
 - **Offen**
