@@ -116,10 +116,14 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 ### Kontext
 - **Datum**: 29.01.2026
 - **Version**: Maui 1.0.14454.1 / iOS 1.0.78
+- **Betroffene Plattformen**: **iOS und Windows-Version**
+- **Betroffene Business Objects**: 
+  - BUS2128 - zeitrückmeldung
+  - Matconf - Materialrückmeldung
 - **Betroffener Bereich**: List Navigation Logik
 
 ### Screenshot
-![alt text](Screenshots/SQLLiteError5.png)
+![alt text](<Screenshots/Navigation BUS2128.png>)
 
 ### Status
 - **Offen**
