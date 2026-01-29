@@ -111,11 +111,12 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 
 ### Aktuelles Verhalten
 - Navigation funktioniert nicht entsprechend der Customizing-Konfiguration
-- Falsche Navigation wird angezeigt
+- **Geht immer in die Eintrags-Liste**, auch wenn **eine oder mehrere Zeitrückmeldungen vorhanden sind**
+- Die Navigation sollte bei vorhandenen Einträgen auf die Liste gehen, was teilweise fehlerhaft ist
 
 ### Kontext
 - **Datum**: 29.01.2026
-- **Version**: Maui 1.0.14454.1 / iOS 1.0.78
+- **Version**: Windows 1.0.14454.1 / iOS 1.0.78
 - **Betroffene Plattformen**: **iOS und Windows-Version**
 - **Betroffene Business Objects**: 
   - BUS2128 - zeitrückmeldung
