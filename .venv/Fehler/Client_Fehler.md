@@ -269,3 +269,64 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 - Prüfen ob gleiches Problem auch bei anderen Objekten (Materialrückmeldung etc.) besteht
 - UI/UX-Logik für Action-Button-Verfügbarkeit implementieren
 - Testen mit verschiedenen Rückmeldungstypen
+
+---
+
+## 8. Edit-Button bei synchronisierten Material-Rückmeldungen soll deaktiviert sein - 30.01.2026
+
+### Symptome
+- Bei synchronisierten (verbuchten) Material-Rückmeldungen ist der **Edit-Button noch aktiv**
+- Nutzer können die Menge einer bereits verbuchten Rückmeldung ändern und speichern
+- Dies führt dazu, dass im SAP eine **zusätzliche Material-Rückmeldung mit der neuen Menge** angelegt wird
+- **Zusätzliche Probleme bei Mengenänderung**:
+  - Einheit wird **nicht automatisch übernommen** wenn Menge geändert wird
+  - **Einheitsliste ist nicht scrollbar** - User kann nicht durch die Einheiten scrollen, wenn die Liste länger ist
+
+### Erwartetes Verhalten
+- **Edit-Button soll deaktiviert/ausgegraut sein** bei synchronisierten (verbuchten) Material-Rückmeldungen
+- Änderungen an bereits synchronisierten Rückmeldungen sollten **nicht möglich sein**
+- Nutzer sollen nur noch neue Rückmeldungen anlegen können (nicht ändern)
+
+### Aktuelles Verhalten
+- Edit-Button ist aktiv bei synchronisierten Rückmeldungen
+- Änderungen werden akzeptiert und führen zu Duplikaten im SAP
+- Keine Warnung oder Sperrung bei Änderung synchronisierter Rückmeldungen
+- Wenn Menge geändert wird, wird die Einheit **nicht automatisch beibehalten/übernommen**
+- **Einheitsliste hat kein Scroll-Verhalten** - bei vielen Einheiten kann User nicht alle anwählen
+
+### Kontext
+- **Datum**: 30.01.2026
+- **Bereich**: Material-Rückmeldung
+- **Betroffene Business Objects**: Matconf - Materialrückmeldung
+- **Betroffene Plattformen**: iOS und Windows-Version
+- **Version**: Windows 1.0.14454.1 / iOS 1.0.78
+
+### Schritte zum Reproduzieren
+1. Material-Rückmeldung erfassen
+2. Speichern und synchronisieren
+3. Synchronisierte Rückmeldung wieder öffnen
+4. Edit-Button klicken / Menge ändern
+5. Änderung speichern
+6. Im SAP erscheint eine neue Material-Rückmeldung mit der geänderten Menge
+
+### Begründung
+- Verhindert versehentliche Änderungen an bereits verbuchten Rückmeldungen
+- Vermeidet Duplikate und Buchungsfehler im SAP
+- Klare Unterscheidung: Bearbeitbar (unsynchronisiert) vs. Nur-Ansicht (synchronisiert)
+- Trägt zu Datenkonsistenz zwischen Mobile-App und SAP bei
+
+### Screenshot
+![alt text](Screenshots/MaterialRückmeldung_Edit.png)
+
+### Status
+- **Offen**
+- Funktionalitäts-Verbesserung
+
+### Nächste Schritte
+- Edit-Button deaktiviert darstellen, wenn Material-Rückmeldung bereits synchronisiert ist
+- Automatisch Einheit beibehalten/setzen, wenn Menge geändert wird
+- Scroll-Funktionalität für Einheitsliste implementieren (wenn Liste länger ist)
+- Prüfen ob gleiches Problem auch bei anderen Rückmeldungstypen (Zeitrückmeldung, etc.) besteht
+- UI-Logik implementieren: synchronisiert = Read-Only, nicht synchronisiert = Bearbeitbar
+- Testen mit verschiedenen Rückmeldungstypen und Sync-Status
+- Testen mit Material mit vielen Einheiten-Optionen
