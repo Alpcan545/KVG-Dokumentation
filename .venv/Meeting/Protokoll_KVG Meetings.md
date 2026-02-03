@@ -120,3 +120,10 @@ Fortsetzung des Status Updates zur Systemspiegelung und ausstehenden Fehlerbeheb
 ## Tickets
 - **KEM-239**: Storno-Button bei Zeitrückmeldung (Details → siehe notes.md)
 - **KEM-XXX**: Material-Buchung Löschen-Button (Details → siehe notes.md)
+
+---
+
+# Protokoll – 10.02.2026
+
+## Offene Punkte
+- Soll der Langtext weiterhin im Action Button innerhalb der Zeitrückmeldungen sichtbar sein
