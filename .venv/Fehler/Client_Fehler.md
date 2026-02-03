@@ -269,3 +269,28 @@ at Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext.<>c__DisplayCl
 - Prüfen ob gleiches Problem auch bei anderen Objekten (Materialrückmeldung etc.) besteht
 - UI/UX-Logik für Action-Button-Verfügbarkeit implementieren
 - Testen mit verschiedenen Rückmeldungstypen
+
+---
+
+## 8. KEM-233 Stornierung von Vorgängen funktioniert nicht - 03.02.2026
+
+### Symptome
+- Beim Erstellen einer **Meldung** erscheint aktuell eine **Fehlermeldung**
+- **Stornierung von Vorgängen** funktioniert nicht
+
+### Vorgang - Stornierung
+- Stornierung funktioniert wie vorgesehen
+- Nach Speichern muss ausgegraut sein
+- Nach Sync muss funktionieren
+
+### Kontext
+- **Datum**: 03.02.2026
+- **Ticket**: KEM-233
+
+### Status
+- **Offen**
+
+### Nächste Schritte
+- Fehlermeldung beim Erstellen der Meldung genauer dokumentieren (Text/Screenshot/Logs)
+- Reproduzierbarkeit prüfen (Szenario + Schritte)
+
