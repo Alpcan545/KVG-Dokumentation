@@ -7,6 +7,8 @@
 !Screenshots/**
 !Meeting/
 !Meeting/**
+!Client Tests/
+!Client Tests/**
 !.gitignore
 
 
