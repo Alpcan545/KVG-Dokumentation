@@ -10,5 +10,7 @@
 !Client Tests/
 !Client Tests/**
 !.gitignore
+!Allgemein/Szenarien/
+!Allgemein/Szenarien/**
 
 
